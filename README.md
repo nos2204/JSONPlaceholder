@@ -1,13 +1,6 @@
 # BÁO CÁO BÀI TẬP KIỂM THỬ SOFTWARE: API TESTING VỚI POSTMAN
 
-## 1. Thông tin sinh viên
-- **Họ và tên:** [Điền Họ và Tên của bạn]
-- **Mã sinh viên:** [Điền Mã Sinh Viên]
-- **Lớp:** [Điền Lớp / Lớp học phần]
-
----
-
-## 2. Tổng quan về Bài tập & Công cụ
+##  Tổng quan về Bài tập & Công cụ
 Bài tập thực hành kiểm thử chức năng (Functional Testing) trên dịch vụ Mock REST API.
 
 - **Mock API Service:** [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
@@ -16,16 +9,16 @@ Bài tập thực hành kiểm thử chức năng (Functional Testing) trên d�
 
 ---
 
-## 3. Kết quả Kiểm thử Chức năng với Postman
+##  Kết quả Kiểm thử Chức năng với Postman
 
-### 3.1. Cấu hình Environment & Collection
+### Cấu hình Environment & Collection
 Thiết lập Collection `JSONPlaceholder API Testing` cùng môi trường `JSONPlaceholder Env` chứa biến `baseUrl = https://jsonplaceholder.typicode.com`.
 
 ![Cấu hình Environment](images/01-env.png)
 
 ---
 
-### 3.2. Phương thức GET - Lấy thông tin bài viết (Read)
+### Phương thức GET - Lấy thông tin bài viết (Read)
 - **Endpoint:** `GET {{baseUrl}}/posts/1`
 - **Trạng thái:** `200 OK`
 - **Mô tả:** Nhận về đúng dữ liệu chi tiết bài viết có ID = 1 dưới dạng JSON.
@@ -34,7 +27,7 @@ Thiết lập Collection `JSONPlaceholder API Testing` cùng môi trường `JSO
 
 ---
 
-### 3.3. Phương thức POST - Tạo mới bài viết (Create)
+### Phương thức POST - Tạo mới bài viết (Create)
 - **Endpoint:** `POST {{baseUrl}}/posts`
 - **Trạng thái:** `201 Created`
 - **Body Request (raw JSON):**
@@ -45,7 +38,11 @@ Thiết lập Collection `JSONPlaceholder API Testing` cùng môi trường `JSO
     "userId": 1
   }
   Mô tả: Hệ thống tiếp nhận thành công và trả về bài viết mới kèm ID hệ thống tự cấp là 101.
-  3.4. Phương thức PUT & DELETE - Cập nhật và Xóa bài viết (Update & Delete)Endpoint PUT: PUT {{baseUrl}}/posts/1 $\rightarrow$ Trạng thái 200 OK (Cập nhật thành công thông tin tiêu đề và nội dung).Endpoint DELETE: DELETE {{baseUrl}}/posts/1 $\rightarrow$ Trạng thái 200 OK (Xóa thành công tài nguyên).3.5. Kiểm thử Tự động (Test Scripts)Thêm các câu lệnh kiểm thử tự động trong tab Scripts của Request GET:JavaScript// 1. Kiểm tra Status Code trả về đúng 200 OK
+ ### Phương thức PUT & DELETE - Cập nhật và Xóa bài viết (Update & Delete)
+ Endpoint PUT: PUT {{baseUrl}}/posts/1 $\rightarrow$ Trạng thái 200 OK (Cập nhật thành công thông tin tiêu đề và nội dung).
+ Endpoint DELETE: DELETE {{baseUrl}}/posts/1 $\rightarrow$ Trạng thái 200 OK (Xóa thành công tài nguyên).
+ ### Kiểm thử Tự động (Test Scripts)Thêm các câu lệnh kiểm thử tự động trong tab Scripts của Request GET:JavaScript
+ // 1. Kiểm tra Status Code trả về đúng 200 OK
 pm.test("Status code is 200 OK", function () {
     pm.response.to.have.status(200);
 });
