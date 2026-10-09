@@ -23,7 +23,7 @@ Thiết lập Collection `JSONPlaceholder API Testing` cùng môi trường `JSO
 - **Trạng thái:** `200 OK`
 - **Mô tả:** Nhận về đúng dữ liệu chi tiết bài viết có ID = 1 dưới dạng JSON.
 
-![Request GET](images/02-get.png)
+![Request GET](02-get.png)
 
 ---
 
