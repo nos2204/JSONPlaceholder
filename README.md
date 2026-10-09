@@ -14,7 +14,7 @@ Bài tập thực hành kiểm thử chức năng (Functional Testing) trên d�
 ### Cấu hình Environment & Collection
 Thiết lập Collection `JSONPlaceholder API Testing` cùng môi trường `JSONPlaceholder Env` chứa biến `baseUrl = https://jsonplaceholder.typicode.com`.
 
-![Cấu hình Environment](images/01-env.png)
+![Cấu hình Environment](01-env.png)
 
 ---
 
